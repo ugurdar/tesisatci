@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yasin Usta - Tesisat Hizmetleri</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background: #f9f9f9; color: #333; }
+        header { background: #2196F3; color: white; padding: 20px; text-align: center; border-radius: 8px; }
+        section { background: white; padding: 20px; margin-top: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        footer { text-align: center; margin-top: 20px; font-size: 0.9em; color: #777; }
+        a { color: #2196F3; text-decoration: none; }
+        button { background-color: #4CAF50; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; border-radius: 4px; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yasin Usta</h1>
+        <p>Profesyonel Tesisat Hizmetleri</p>
+    </header>
+
+    <section>
+        <h2>Hizmetlerimiz</h2>
+        <ul>
+            <li>Su Kaçağı Tespiti</li>
+            <li>Petek Temizliği</li>
+            <li>Musluk ve Batarya Montajı</li>
+            <li>Kombi Bakımı ve Onarımı</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Fiyat Hesaplama (Demo)</h2>
+        <p>Hizmet sayısını girin ve tahmini fiyatı görün:</p>
+        <input type="number" id="serviceCount" placeholder="Hizmet sayısı" min="1" style="padding:5px; font-size:16px;">
+        <button onclick="calculatePrice()">Hesapla</button>
+        <p id="priceResult" style="margin-top:10px; font-weight:bold;"></p>
+    </section>
+
+    <section>
+        <h2>İletişim</h2>
+        <p>Telefon: <a href="tel:+905321234567">+90 532 123 45 67</a></p>
+        <p>WhatsApp: <a href="https://wa.me/905321234567">Mesaj Gönder</a></p>
+        <p>E-posta: <a href="mailto:yasinusta@example.com">yasinusta@example.com</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Yasin Usta Tesisat Hizmetleri
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            const count = document.getElementById('serviceCount').value;
+            const pricePerService = 250; // TL
+            if(count > 0) {
+                const totalPrice = count * pricePerService;
+                document.getElementById('priceResult').textContent = "Tahmini Fiyat: " + totalPrice + " TL";
+            } else {
+                document.getElementById('priceResult').textContent = "Lütfen geçerli bir sayı girin.";
+            }
+        }
+    </script>
+</body>
+</html>
