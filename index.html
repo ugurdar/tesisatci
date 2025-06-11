@@ -1,203 +1,207 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aydın Tesisat | Eskişehir'in Profesyonel Tesisatçısı</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aydın Tesisat | Eskişehir'in Profesyonel Tesisatçısı</title>
 
-    <!-- ===== Tailwind via CDN ===== -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- ===== Google Fonts ===== -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
-    <!-- ===== Icons (Font‑Awesome) ===== -->
-    <script src="https://kit.fontawesome.com/a2e0dc07e4.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2e0dc07e4.js" crossorigin="anonymous"></script>
 
-    <!-- ===== Animate‑On‑Scroll (AOS) ===== -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-    <!-- ===== Lightbox2 for Gallery ===== -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-    <style>
-      /* Global tweaks */
-      body {
-        font-family: 'Poppins', sans-serif;
-        scroll-behavior: smooth;
-      }
-      /* Hero animated gradient */
-      .bg-animate {
-        background: linear-gradient(130deg, #0ea5e9, #38bdf8, #0ea5e9);
-        background-size: 600% 600%;
-        animation: gradientMove 15s ease infinite;
-      }
-      @keyframes gradientMove {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      /* Navbar blur effect */
-      .navbar-blur {
-        @apply backdrop-blur-sm bg-white/70 shadow-lg;
-      }
-    </style>
-  </head>
+  <style>
+    body{font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+    /* Hero animated gradient */
+    .bg-animate{background:linear-gradient(130deg,#0ea5e9,#38bdf8,#0ea5e9);background-size:600% 600%;animation:gradientMove 15s ease infinite}
+    @keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    /* Navbar blur */
+    .navbar-blur{@apply backdrop-blur-sm bg-white/70 shadow-lg;}
+    /* Swiper slide */
+    .swiper-slide img{@apply w-full h-64 object-cover rounded-lg shadow;}
+  </style>
+</head>
+<body class="text-gray-800">
 
-  <body class="text-gray-800">
-    <!-- ===== Navbar ===== -->
-    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all">
-      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="#home" class="font-bold text-lg sm:text-2xl text-sky-600">Aydın&nbsp;Tesisat</a>
-        <nav class="hidden md:flex gap-6 font-medium">
-          <a href="#home" class="hover:text-sky-600">Anasayfa</a>
-          <a href="#about" class="hover:text-sky-600">Hakkımızda</a>
-          <a href="#services" class="hover:text-sky-600">Hizmetlerimiz</a>
-          <a href="#faq" class="hover:text-sky-600">S.S.S</a>
-          <a href="#gallery" class="hover:text-sky-600">Galeri</a>
-          <a href="#contact" class="hover:text-sky-600">İletişim</a>
-        </nav>
-        <!-- Mobile Hamburger -->
-        <button id="hamburger" class="md:hidden text-2xl text-sky-600"><i class="fas fa-bars"></i></button>
+<!-- ===== Navbar ===== -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="#home" class="font-bold text-lg sm:text-2xl text-sky-600">Aydın&nbsp;Tesisat</a>
+    <nav class="hidden md:flex gap-6 font-medium">
+      <a href="#home"      class="hover:text-sky-600">Anasayfa</a>
+      <a href="#about"     class="hover:text-sky-600">Hakkımızda</a>
+      <a href="#services"  class="hover:text-sky-600">Hizmetlerimiz</a>
+      <a href="#faq"       class="hover:text-sky-600">S.S.S</a>
+      <a href="#gallery"   class="hover:text-sky-600">Galeri</a>
+      <a href="#contact"   class="hover:text-sky-600">İletişim</a>
+    </nav>
+    <button id="hamburger" class="md:hidden text-2xl text-sky-600"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden flex-col gap-4 px-6 pb-6 bg-white">
+    <a href="#home"     class="py-1">Anasayfa</a>
+    <a href="#about"    class="py-1">Hakkımızda</a>
+    <a href="#services" class="py-1">Hizmetlerimiz</a>
+    <a href="#faq"      class="py-1">S.S.S</a>
+    <a href="#gallery"  class="py-1">Galeri</a>
+    <a href="#contact"  class="py-1">İletişim</a>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section id="home" class="bg-animate h-screen flex items-center justify-center relative text-white">
+  <div class="text-center px-6" data-aos="fade-up">
+    <h1 class="text-4xl sm:text-6xl font-bold mb-6 drop-shadow-lg">Eskişehir'de 7/24 Tesisat Çözümleri</h1>
+    <p class="mb-8 text-lg sm:text-xl">Tıkanıklık açmadan su kaçak tespitine kadar tüm ihtiyaçlarınızda yanınızdayız.</p>
+    <a href="tel:+905321234567" class="inline-block bg-white text-sky-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition">Hemen&nbsp;Ara</a>
+  </div>
+  <div class="absolute bottom-8 inset-x-0 flex justify-center">
+    <i class="fas fa-chevron-down animate-bounce text-2xl"></i>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6" data-aos="fade-right">
+    <h2 class="text-3xl font-bold text-center mb-8">Hakkımızda</h2>
+    <p class="text-lg leading-relaxed text-center">Eskişehir'in önde gelen tesisat firmalarından Aydın Tesisat olarak, deneyimli ekibimizle 10 yılı aşkın süredir profesyonel hizmet sunuyoruz. İleri teknolojik ekipmanlarımız ve müşteri odaklı bakış açımız ile kırıp dökmeden, hızlı ve kalıcı çözümler üretiyoruz.</p>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Hizmetlerimiz</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Örnek Kartlar -->
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in" data-aos-delay="50">
+        <div class="text-4xl text-sky-600 mb-4"><i class="fas fa-water"></i></div>
+        <h3 class="font-semibold text-xl mb-2">Tıkanıklık Açma</h3>
+        <p class="text-sm">Lavabo, tuvalet, logar tıkanıklıklarında profesyonel ekipmanlarımızla 24 saat yanınızdayız.</p>
       </div>
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden flex-col gap-4 px-6 pb-6 bg-white">
-        <a href="#home" class="py-1">Anasayfa</a>
-        <a href="#about" class="py-1">Hakkımızda</a>
-        <a href="#services" class="py-1">Hizmetlerimiz</a>
-        <a href="#faq" class="py-1">S.S.S</a>
-        <a href="#gallery" class="py-1">Galeri</a>
-        <a href="#contact" class="py-1">İletişim</a>
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl text-sky-600 mb-4"><i class="fas fa-search-location"></i></div>
+        <h3 class="font-semibold text-xl mb-2">Su Kaçak Tespiti</h3>
+        <p class="text-sm">Kameralı ve termal cihazlarla, kırıp dökmeden noktasal kaçak tespiti yapıyoruz.</p>
       </div>
-    </header>
-
-    <!-- ===== Hero ===== -->
-    <section id="home" class="bg-animate h-screen flex items-center justify-center relative text-white">
-      <div class="text-center px-6" data-aos="fade-up">
-        <h1 class="text-4xl sm:text-6xl font-bold mb-6 drop-shadow-lg">Eskişehir'de 7/24 Tesisat Çözümleri</h1>
-        <p class="mb-8 text-lg sm:text-xl">Tıkanıklık açmadan su kaçak tespitine kadar tüm ihtiyaçlarınızda yanınızdayız.</p>
-        <a href="tel:+905321234567" class="inline-block bg-white text-sky-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition">Hemen&nbsp;Ara</a>
+      <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in" data-aos-delay="150">
+        <div class="text-4xl text-sky-600 mb-4"><i class="fas fa-burn"></i></div>
+        <h3 class="font-semibold text-xl mb-2">Petek Temizliği</h3>
+        <p class="text-sm">Yüksek enerji tasarrufu ve eşit ısınma için profesyonel petek temizliği hizmeti.</p>
       </div>
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 inset-x-0 flex justify-center"><i class="fas fa-chevron-down animate-bounce text-2xl"></i></div>
-    </section>
+      <!-- Diğer hizmet kartlarını benzer şekilde ekleyebilirsin -->
+    </div>
+  </div>
+</section>
 
-    <!-- ===== About ===== -->
-    <section id="about" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-6" data-aos="fade-right">
-        <h2 class="text-3xl font-bold text-center mb-8">Hakkımızda</h2>
-        <p class="text-lg leading-relaxed text-center">Eskişehir'in önde gelen tesisat firmalarından Aydın Tesisat olarak, deneyimli ekibimizle 10 yılı aşkın süredir profesyonel hizmet sunuyoruz. İleri teknolojik ekipmanlarımız ve müşteri odaklı bakış açımız ile kırıp dökmeden, hızlı ve kalıcı çözümler üretiyoruz.</p>
+<!-- ===== FAQ ===== -->
+<section id="faq" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Sıkça Sorulan Sorular</h2>
+    <div class="space-y-4">
+      <details class="p-4 border border-gray-200 rounded-lg cursor-pointer">
+        <summary class="font-medium">Hangi saatlerde hizmet veriyorsunuz?</summary>
+        <p class="mt-2 text-gray-600">Aralıksız 7/24 hizmet sunmaktayız.</p>
+      </details>
+      <details class="p-4 border border-gray-200 rounded-lg cursor-pointer">
+        <summary class="font-medium">Fiyatlandırma nasıl yapılır?</summary>
+        <p class="mt-2 text-gray-600">Hizmet türüne ve işin kapsamına göre ücretsiz keşif sonrası net fiyat belirlenir.</p>
+      </details>
+      <details class="p-4 border border-gray-200 rounded-lg cursor-pointer">
+        <summary class="font-medium">Garanti süreniz var mı?</summary>
+        <p class="mt-2 text-gray-600">Tüm işlerimizde 1 yıl işçilik garantisi sunuyoruz.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Gallery (Swiper) ===== -->
+<section id="gallery" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-12">Galeri</h2>
+    <div class="swiper gallerySwiper">
+      <div class="swiper-wrapper" id="galleryWrapper">
+        <!-- JS ile dolacak -->
       </div>
-    </section>
+      <div class="swiper-pagination mt-4 !relative"></div>
+    </div>
+  </div>
+</section>
 
-    <!-- ===== Services ===== -->
-    <section id="services" class="py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Hizmetlerimiz</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Card Template -->
-          <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in" data-aos-delay="50">
-            <div class="text-4xl text-sky-600 mb-4"><i class="fas fa-water"></i></div>
-            <h3 class="font-semibold text-xl mb-2">Tıkanıklık Açma</h3>
-            <p class="text-sm">Lavabo, tuvalet, logar tıkanıklıklarında profesyonel ekipmanlarımızla 24 saat yanınızdayız.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="text-4xl text-sky-600 mb-4"><i class="fas fa-search-location"></i></div>
-            <h3 class="font-semibold text-xl mb-2">Su Kaçak Tespiti</h3>
-            <p class="text-sm">Kameralı ve termal cihazlarla, kırıp dökmeden noktasal kaçak tespiti yapıyoruz.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg p-6" data-aos="zoom-in" data-aos-delay="150">
-            <div class="text-4xl text-sky-600 mb-4"><i class="fas fa-burn"></i></div>
-            <h3 class="font-semibold text-xl mb-2">Petek Temizliği</h3>
-            <p class="text-sm">Yüksek enerji tasarrufu ve eşit ısınma için profesyonel petek temizliği hizmeti.</p>
-          </div>
-          <!-- Add more cards similarly, you can duplicate block and change content -->
-        </div>
-      </div>
-    </section>
+<!-- ===== Contact ===== -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10" data-aos="fade-up">
+    <!-- İletişim Bilgileri -->
+    <div>
+      <h2 class="text-3xl font-bold mb-6">İletişim</h2>
+      <p class="mb-4"><i class="fas fa-phone-alt text-sky-600 mr-2"></i>Telefon: <a href="tel:+905321234567" class="text-sky-600 font-medium">+90&nbsp;532&nbsp;123&nbsp;45&nbsp;67</a></p>
+      <p class="mb-4"><i class="fab fa-whatsapp text-sky-600 mr-2"></i>WhatsApp: <a href="https://wa.me/905321234567" class="text-sky-600 font-medium">Mesaj Gönder</a></p>
+      <p class="mb-8"><i class="fas fa-envelope text-sky-600 mr-2"></i>E-posta: <a href="mailto:info@aydintesisat.com" class="text-sky-600 font-medium">info@aydintesisat.com</a></p>
+      <p>Adres: Eskişehir Merkez, Odunpazarı / Eskişehir</p>
+    </div>
+    <!-- Google Maps -->
+    <div class="w-full">
+      <iframe class="rounded-xl shadow w-full h-80" src="https://www.google.com/maps/embed?pb=!1m18!..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
 
-    <!-- ===== FAQ ===== -->
-    <section id="faq" class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
-        <h2 class="text-3xl font-bold text-center mb-8">Sıkça Sorulan Sorular</h2>
-        <div class="space-y-4">
-          <details class="p-4 border border-gray-200 rounded-lg cursor-pointer">
-            <summary class="font-medium">Hangi saatlerde hizmet veriyorsunuz?</summary>
-            <p class="mt-2 text-gray-600">Aralıksız 7/24 hizmet sunmaktayız.</p>
-          </details>
-          <details class="p-4 border border-gray-200 rounded-lg cursor-pointer">
-            <summary class="font-medium">Fiyatlandırma nasıl yapılır?</summary>
-            <p class="mt-2 text-gray-600">Hizmet türüne ve işin kapsamına göre ücretsiz keşif sonrası net fiyat belirlenir.</p>
-          </details>
-          <details class="p-4 border border-gray-200 rounded-lg cursor-pointer">
-            <summary class="font-medium">Garanti süreniz var mı?</summary>
-            <p class="mt-2 text-gray-600">Tüm işlerimizde 1 yıl işçilik garantisi sunuyoruz.</p>
-          </details>
-        </div>
-      </div>
-    </section>
+<!-- ===== Footer ===== -->
+<footer class="bg-gray-800 text-white py-6 text-center">
+  <p>&copy; 2025 Aydın Tesisat – Tüm Hakları Saklıdır</p>
+</footer>
 
-    <!-- ===== Gallery ===== -->
-    <section id="gallery" class="py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Galeri</h2>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="zoom-in-up">
-          <!-- Replace src with your image paths in /img -->
-          <a href="img/photo1.jpg" data-lightbox="work"><img src="img/photo1.jpg" class="rounded-lg shadow" alt="Çalışma 1" /></a>
-          <a href="img/photo2.jpg" data-lightbox="work"><img src="img/photo2.jpg" class="rounded-lg shadow" alt="Çalışma 2" /></a>
-          <a href="img/photo3.jpg" data-lightbox="work"><img src="img/photo3.jpg" class="rounded-lg shadow" alt="Çalışma 3" /></a>
-          <a href="img/photo4.jpg" data-lightbox="work"><img src="img/photo4.jpg" class="rounded-lg shadow" alt="Çalışma 4" /></a>
-          <a href="img/photo5.jpg" data-lightbox="work"><img src="img/photo5.jpg" class="rounded-lg shadow" alt="Çalışma 5" /></a>
-          <a href="img/photo6.jpg" data-lightbox="work"><img src="img/photo6.jpg" class="rounded-lg shadow" alt="Çalışma 6" /></a>
-        </div>
-      </div>
-    </section>
+<!-- ===== Scripts ===== -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  /* ===== Navbar Scroll Effect ===== */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) navbar.classList.add('navbar-blur');
+    else navbar.classList.remove('navbar-blur');
+  });
 
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10" data-aos="fade-up">
-        <!-- Contact Info -->
-        <div>
-          <h2 class="text-3xl font-bold mb-6">İletişim</h2>
-          <p class="mb-4"><i class="fas fa-phone-alt text-sky-600 mr-2"></i><a href="tel:+905321234567" class="hover:underline">+90 532 123 45 67</a></p>
-          <p class="mb-4"><i class="fas fa-envelope text-sky-600 mr-2"></i><a href="mailto:info@aydintesisat.com" class="hover:underline">info@aydintesisat.com</a></p>
-          <p class="mb-4"><i class="fas fa-map-marker-alt text-sky-600 mr-2"></i>Kurtuluş Mh. Örnek Sk. No:10 Tepebaşı / Eskişehir</p>
-        </div>
-        <!-- Google Map -->
-        <div class="rounded-lg overflow-hidden shadow-lg">
-          <!-- Replace coordinates with actual location -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.3483899368283!2d30.52087901537924!3d39.77916737944561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc1943b6e3d1b1%3A0x4c8aabcdfbb12345!2sEskişehir!5e0!3m2!1str!2str!4v1718090000000" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
+  /* ===== Mobile Menu ===== */
+  const ham = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  ham.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
 
-    <!-- ===== Footer ===== -->
-    <footer class="bg-gray-800 text-gray-200 py-6 text-center">
-      <p>&copy; 2025 Aydın Tesisat. Tüm Hakları Saklıdır.</p>
-    </footer>
+  /* ===== AOS Init ===== */
+  AOS.init({ once: true, duration: 700 });
 
-    <!-- ===== Scripts ===== -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <script>
-      AOS.init({ once: true, duration: 700, offset: 80 });
-
-      // Navbar blur & shrink on scroll
-      const navbar = document.getElementById('navbar');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-          navbar.classList.add('navbar-blur', 'py-2');
-        } else {
-          navbar.classList.remove('navbar-blur', 'py-2');
-        }
-      });
-
-      // Mobile menu toggle
-      const hamburger = document.getElementById('hamburger');
-      const mobileMenu = document.getElementById('mobileMenu');
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    </script>
-  </body>
+  /* ===== Swiper Gallery ===== */
+  const wrapper = document.getElementById('galleryWrapper');
+  const MAX_IMG = 20;          // kaç adede kadar denensin?
+  for (let i = 1; i <= MAX_IMG; i++) {
+    const imgPath = `img/${i}.png`;
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+    const img = document.createElement('img');
+    img.src = imgPath;
+    img.alt = `Galeri ${i}`;
+    img.onerror = () => slide.remove();   // Görsel yoksa sil
+    slide.appendChild(img);
+    wrapper.appendChild(slide);
+  }
+  const swiper = new Swiper('.gallerySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    breakpoints: { 640:{slidesPerView:2},1024:{slidesPerView:3} }
+  });
+</script>
+</body>
 </html>
