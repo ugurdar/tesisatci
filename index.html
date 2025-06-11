@@ -3,63 +3,83 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yasin Usta - Tesisat Hizmetleri</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background: #f9f9f9; color: #333; }
-        header { background: #2196F3; color: white; padding: 20px; text-align: center; border-radius: 8px; }
-        section { background: white; padding: 20px; margin-top: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        footer { text-align: center; margin-top: 20px; font-size: 0.9em; color: #777; }
-        a { color: #2196F3; text-decoration: none; }
-        button { background-color: #4CAF50; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; border-radius: 4px; }
-        button:hover { background-color: #45a049; }
-    </style>
+    <title>Aydın Tesisat - Eskişehir</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
     <header>
-        <h1>Yasin Usta</h1>
-        <p>Profesyonel Tesisat Hizmetleri</p>
+        <div class="container">
+            <h1>Aydın Tesisat</h1>
+            <nav>
+                <a href="#home">Anasayfa</a>
+                <a href="#about">Hakkımızda</a>
+                <a href="#services">Hizmetlerimiz</a>
+                <a href="#faq">S.S.S</a>
+                <a href="#gallery">Galeri</a>
+                <a href="#contact">İletişim</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
+    <section id="home" class="section">
+        <h2>Eskişehir'in Güvenilir Tesisatçısı</h2>
+        <p>Her türlü tesisat sorununa 7/24 müdahale edebilmekteyiz.</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>Hakkımızda</h2>
+        <p>Aydın Tesisat olarak uzun yıllardır Eskişehir'de profesyonel tesisat hizmeti sunuyoruz. Müşteri memnuniyetini ön planda tutan uzman kadromuz ile hızlı ve güvenilir çözümler sağlıyoruz.</p>
+    </section>
+
+    <section id="services" class="section">
         <h2>Hizmetlerimiz</h2>
         <ul>
-            <li>Su Kaçağı Tespiti</li>
+            <li>Tıkanıklık Açma</li>
+            <li>Su Kaçak Tespiti</li>
+            <li>Rezervuar Arıza Tamiri</li>
+            <li>Musluk Tamiri</li>
+            <li>Klozet Tamiri</li>
             <li>Petek Temizliği</li>
-            <li>Musluk ve Batarya Montajı</li>
-            <li>Kombi Bakımı ve Onarımı</li>
+            <li>Süzgeç Tıkanıklığı Açma</li>
+            <li>Mutfak Su Tesisatı</li>
+            <li>Kameralı Su Kaçak Tespit</li>
+            <li>Su Tesisat Tamiri</li>
+            <li>Duş Bataryası Tamiri</li>
+            <li>Lavabo Tamiri</li>
+            <li>Yerden Isıtma Tesisatı</li>
         </ul>
     </section>
 
-    <section>
-        <h2>Fiyat Hesaplama (Demo)</h2>
-        <p>Hizmet sayısını girin ve tahmini fiyatı görün:</p>
-        <input type="number" id="serviceCount" placeholder="Hizmet sayısı" min="1" style="padding:5px; font-size:16px;">
-        <button onclick="calculatePrice()">Hesapla</button>
-        <p id="priceResult" style="margin-top:10px; font-weight:bold;"></p>
+    <section id="faq" class="section">
+        <h2>Sıkça Sorulan Sorular</h2>
+        <p><strong>Soru 1:</strong> Hangi saatlerde hizmet veriyorsunuz?<br> <strong>Cevap:</strong> 7/24 hizmet sağlamaktayız.</p>
+        <p><strong>Soru 2:</strong> Fiyatlandırma nasıl yapılıyor?<br> <strong>Cevap:</strong> Hizmet türüne göre fiyatlandırma yapıyoruz, ücretsiz keşif imkanı sunuyoruz.</p>
     </section>
 
-    <section>
+    <section id="gallery" class="section">
+        <h2>Galeri</h2>
+        <div class="gallery">
+            <img src="img/photo1.jpg" alt="İş 1" />
+            <img src="img/photo2.jpg" alt="İş 2" />
+            <img src="img/photo3.jpg" alt="İş 3" />
+        </div>
+    </section>
+
+    <section id="contact" class="section">
         <h2>İletişim</h2>
         <p>Telefon: <a href="tel:+905321234567">+90 532 123 45 67</a></p>
         <p>WhatsApp: <a href="https://wa.me/905321234567">Mesaj Gönder</a></p>
-        <p>E-posta: <a href="mailto:yasinusta@example.com">yasinusta@example.com</a></p>
+        <p>E-posta: <a href="mailto:aydin@example.com">aydin@example.com</a></p>
+        <div style="margin-top:20px;">
+            <h3>Konumumuz</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
     </section>
 
     <footer>
-        &copy; 2025 Yasin Usta Tesisat Hizmetleri
+        &copy; 2025 Aydın Tesisat - Tüm Hakları Saklıdır
     </footer>
 
-    <script>
-        function calculatePrice() {
-            const count = document.getElementById('serviceCount').value;
-            const pricePerService = 250; // TL
-            if(count > 0) {
-                const totalPrice = count * pricePerService;
-                document.getElementById('priceResult').textContent = "Tahmini Fiyat: " + totalPrice + " TL";
-            } else {
-                document.getElementById('priceResult').textContent = "Lütfen geçerli bir sayı girin.";
-            }
-        }
-    </script>
 </body>
 </html>
