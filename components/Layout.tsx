@@ -21,10 +21,14 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta
           name="keywords"
-          content="tesisat, sıhhi tesisat, su tesisatı, Eskişehir tesisatçı, Hüner Tesisat"
+          content="tesisat, sıhhi tesisat, su kaçağı, doğalgaz, kalorifer, petek temizleme, Eskişehir tesisatçı, Hüner Tesisat"
         />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/1.png" />
+        <meta property="og:locale" content="tr_TR" />
+        <link rel="canonical" href="https://hunertesisat.com" />
       </Head>
       <Header />
       <main>{children}</main>

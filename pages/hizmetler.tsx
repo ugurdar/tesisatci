@@ -1,18 +1,36 @@
 import Layout from '../components/Layout';
-import Image from 'next/image';
 
 export default function Hizmetler() {
   return (
     <Layout title="Hizmetler - Hüner Tesisat" description="Sunduğumuz tesisat hizmetleri">
-      <Image src="/images/2.png" alt="Hizmetler" width={600} height={400} style={{maxWidth:"100%",height:"auto"}} />
-      <h1>Hizmetlerimiz</h1>
-      <ul>
-        <li>Su kaçağı tespiti ve onarımı</li>
-        <li>Doğalgaz tesisatı</li>
-        <li>Kalorifer tesisatı</li>
-        <li>Kombi bakımı ve onarımı</li>
-        <li>24/7 acil tesisat hizmeti</li>
-      </ul>
+      <section className="container">
+        <h1>Hizmetlerimiz</h1>
+        <ul className="service-list">
+          <li>
+            <h2>Su Kaçağı Tespiti ve Onarımı</h2>
+            <p>
+              Termal kameralar ve dinleme cihazları ile kırmadan su kaçağı tespiti ve
+              onarım hizmeti sunuyoruz.
+            </p>
+          </li>
+          <li>
+            <h2>Doğalgaz Tesisatı</h2>
+            <p>Projeden montaja tüm doğalgaz tesisatı ihtiyaçlarınız için çözüm.</p>
+          </li>
+          <li>
+            <h2>Kalorifer Tesisatı</h2>
+            <p>Verimli ısıtma sistemleri için kaliteli malzeme ve işçilik.</p>
+          </li>
+          <li>
+            <h2>Kombi Bakımı ve Onarımı</h2>
+            <p>Kombi arızalarına hızlı müdahale ve periyodik bakım hizmeti.</p>
+          </li>
+          <li>
+            <h2>24/7 Acil Tesisat Hizmeti</h2>
+            <p>Acil durumlarda günün her saati yanınızdayız.</p>
+          </li>
+        </ul>
+      </section>
     </Layout>
   );
 }
