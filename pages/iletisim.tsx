@@ -40,6 +40,7 @@ export default function Iletisim() {
           </div>
         </div>
       </section>
+
     </Layout>
   );
 }

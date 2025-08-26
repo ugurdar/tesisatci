@@ -12,6 +12,7 @@ export default function Header() {
           <Link href="/hizmetler">Hizmetler</Link>
           <Link href="/iletisim">İletişim</Link>
         </div>
+
       </nav>
     </header>
   );

@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 export default function Home() {
   return (
     <Layout
@@ -34,6 +35,7 @@ export default function Home() {
             <p>Verimli ısıtma sistemleri için uzman çözümler.</p>
           </div>
         </div>
+
       </section>
     </Layout>
   );
