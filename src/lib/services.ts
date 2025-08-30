@@ -26,7 +26,7 @@ export const services: Service[] = [
     description: 'Termal kamera ve akustik dinleme cihazları ile noktasal, kırmadan kaçak tespiti.',
     longDescription: 'Evinizde veya iş yerinizde oluşan, faturalarınızı yükselten ve duvarlarınıza zarar veren gizli su kaçaklarını, termal kameralar ve akustik dinleme cihazları gibi üstün teknolojilerle noktasal olarak tespit ediyoruz. Gereksiz kırma dökme işlemlerine son vererek, sadece sorunlu bölgeye müdahale ediyor ve hızlıca onarıyoruz.',
     icon: Pipette,
-    image: 'https://picsum.photos/800/400',
+    image: 'https://images.unsplash.com/photo-1705401580840-891ce3ab741b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8d2F0ZXIlMjBsZWFrJTIwdGVzdGVyfGVufDB8fHx8MTc1NjU4NTYyMnww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'thermal camera water',
   },
   {
