@@ -34,7 +34,7 @@ export default function Home() {
             </div>
             <div>
               <Image
-                src="https://picsum.photos/600/400"
+                src="https://images.unsplash.com/photo-1749532125405-709950966b0e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwbHVtYmVyfGVufDB8fHx8MTc1NjU4NTE3NXww&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Tesisatçı, modern aletlerle mutfak lavabosunu tamir ediyor"
                 data-ai-hint="plumber kitchen"
                 width={600}
