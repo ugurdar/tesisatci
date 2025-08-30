@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function LocationPage() {
     // Kırmızıtoprak, Ercan Sk., 26020 Odunpazarı/Eskişehir
-    const position = { lat: 39.7597, lng: 30.5228 }; 
+    const position = { lat: 39.773276, lng: 30.506643 }; 
 
     return (
         <div className="py-16 md:py-24 bg-background">
