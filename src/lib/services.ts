@@ -42,9 +42,9 @@ export const services: Service[] = [
     slug: 'musluk-batarya-degisimi',
     title: 'Musluk ve Batarya Değişimi',
     description: 'Banyo ve mutfağınız için her marka ve model musluk, batarya montajı ve tamiri.',
-    longDescription: 'Su damlatan, arızalı veya eskimiş banyo ve mutfak bataryalarınızı, isteğiniz doğrultusunda estetik, fonksiyonel ve su tasarrufu sağlayan yeni modellerle değiştiriyoruz. Her marka ve modelde montaj ve tamir hizmeti sunuyoruz.',
+    longDescription: 'Evinizin veya iş yerinizin estetiğini ve fonksiyonelliğini doğrudan etkileyen bataryalar, zamanla eskiyebilir, su sızdırabilir veya arızalanabilir. Hüner Tesisat olarak, su damlatan, arızalı veya eskimiş banyo ve mutfak bataryalarınızı, sektörün önde gelen, kaliteli ve garantili markalarının ürünleriyle yeniliyoruz. Sadece estetik değil, aynı zamanda su tasarrufu sağlayan fonksiyonel ve modern modellerle, hem bütçenize hem de çevreye katkıda bulunmanızı sağlıyoruz. Uzman ekibimiz, montaj işlemini titizlikle gerçekleştirerek gelecekte oluşabilecek sızıntı ve arızaların önüne geçer. Her marka ve modelde profesyonel montaj ve tamir hizmeti sunarak mutfağınıza ve banyonuza değer katıyoruz.',
     icon: Droplets,
-    image: 'https://picsum.photos/800/400',
+    image: 'https://images.unsplash.com/photo-1595514535116-d0401260e7cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzaW5rfGVufDB8fHx8MTc1NjU4NTQxOHww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'faucet installation',
   },
   {
