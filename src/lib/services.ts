@@ -17,7 +17,7 @@ export const services: Service[] = [
     description: 'Modern robot cihazlarla mutfak, banyo ve tuvalet giderlerinizi kırmadan açıyoruz.',
     longDescription: 'Mutfak lavabosu, banyo gideri, tuvalet ve ana kanalizasyon hatlarınızda meydana gelen en inatçı tıkanıklıkları bile, son teknoloji ürünü kameralı ve robotik sistemlerimizle çevreye ve mülkünüze zarar vermeden, kırma dökme işlemi yapmaksızın açıyoruz. Gider içerisini görüntüleyen özel kameralarımız sayesinde, tıkanıklığın (yağ, kıl, kök veya yabancı cisimler gibi) tam yerini ve nedenini noktasal olarak tespit ediyoruz. Bu modern yaklaşım, gereksiz tadilat masraflarını ortadan kaldırır ve soruna hızlı, kalıcı ve hijyenik bir çözüm getirir. Tesisat sisteminizin yeniden sorunsuz çalışmasını sağlayarak günlük yaşam konforunuzu geri kazandırıyoruz.',
     icon: Wrench,
-    image: 'https://images.unsplash.com/photo-1609946860422-5e9cefc924ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8dG9pbGV0fGVufDB8fHx8MTc1NjU4NTMyMHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1556227703-ab57dbc6f839?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8dG9pbGV0fGVufDB8fHx8MTc1NjU4NTMyMHww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'drain cleaning service',
   },
   {
