@@ -9,7 +9,8 @@ export const metadata = {
 };
 
 export default function LocationPage() {
-    const position = { lat: 39.7570, lng: 30.5210 }; // Eskişehir
+    // Kırmızıtoprak, Yenipazar Sk., 26020 Odunpazarı/Eskişehir
+    const position = { lat: 39.7615, lng: 30.5218 }; 
 
     return (
         <div className="py-16 md:py-24 bg-background">
@@ -17,7 +18,7 @@ export default function LocationPage() {
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Servis Alanı ve Konum</h1>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        Eskişehir ve çevresine gururla hizmet veriyoruz. Aracımızı kullanarak hizmet alanımızda olup olmadığınızı görün.
+                        Eskişehir ve çevresine gururla hizmet veriyoruz. Harita üzerinden konumumuzu görebilirsiniz.
                     </p>
                 </div>
 
