@@ -53,7 +53,7 @@ export const services: Service[] = [
     description: 'Klozet iç takım değişimi, su sızıntıları, sifon tamiri ve montaj hizmetleri.',
     longDescription: 'Klozetinizdeki su sızıntıları, dolum problemleri veya çalışmayan sifon gibi arızalar için profesyonel tamir ve parça değişimi hizmeti sunuyoruz. Asma ve normal klozetlerin iç takımlarını yenileyerek hem su israfını önlüyor hem de sorunsuz kullanım sağlıyoruz.',
     icon: Bath,
-    image: 'https://images.unsplash.com/photo-1733837305594-86d5929045fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNnx8dG9pbGV0JTIwc2lwaG9ufGVufDB8fHx8MTc1NjU4NTk0M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1609946860422-5e9cefc924ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8dG9pbGV0fGVufDB8fHx8MTc1NjU4NTMyMHww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'toilet repair',
   },
     {
@@ -62,7 +62,7 @@ export const services: Service[] = [
     description: 'Komple banyo ve mutfak tesisatı, vitrifiye montajı ve yenileme işleri.',
     longDescription: 'Banyonuzu veya mutfağınızı modern bir görünüme kavuşturmak için komple tesisat yenileme, fayans, vitrifiye (klozet, lavabo, duşakabin) montajı ve tüm tadilat işlerinizi anahtar teslim olarak gerçekleştiriyoruz. Hayalinizdeki mekanı yaratmak için buradayız.',
     icon: ShieldCheck,
-    image: 'https://picsum.photos/800/400',
+    image: 'https://images.unsplash.com/photo-1541085595943-84dd4307f30d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8YmF0aHxlbnwwfHx8fDE3NTY1ODYwOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'modern bathroom',
   },
   {
@@ -71,7 +71,7 @@ export const services: Service[] = [
     description: 'Bina ve endüstriyel tesisler için ısıtma, soğutma ve havalandırma çözümleri.',
     longDescription: 'Isıtma, soğutma, havalandırma, yangın söndürme ve sıhhi tesisat gibi binanızın tüm mekanik sistemlerinin projelendirilmesi, kurulumu ve bakımını yapıyoruz. Mühendislik ilkelerine uygun, verimli ve güvenilir sistemler kuruyoruz.',
     icon: Cog,
-    image: 'https://picsum.photos/800/400',
+    image: 'https://images.unsplash.com/photo-1615746363486-92cd8c5e0a90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8bWVjaGFuaWMlMjBwbHVtYmVyaW5nfGVufDB8fHx8MTc1NjU4NjcwN3ww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'hvac systems',
   },
   {
