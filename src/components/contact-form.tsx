@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useEffect, useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -39,7 +39,7 @@ const initialState = {
 };
 
 export default function ContactForm() {
-    const [state, formAction] = useFormState(handleContactForm, initialState);
+    const [state, formAction] = useActionState(handleContactForm, initialState);
     const { toast } = useToast();
     const { register, formState: { errors }, reset } = useForm<ContactFormValues>({
         resolver: zodResolver(ContactSchema),
