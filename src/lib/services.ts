@@ -53,7 +53,7 @@ export const services: Service[] = [
     description: 'Klozet iç takım değişimi, su sızıntıları, sifon tamiri ve montaj hizmetleri.',
     longDescription: 'Klozetinizdeki su sızıntıları, dolum problemleri veya çalışmayan sifon gibi arızalar için profesyonel tamir ve parça değişimi hizmeti sunuyoruz. Asma ve normal klozetlerin iç takımlarını yenileyerek hem su israfını önlüyor hem de sorunsuz kullanım sağlıyoruz.',
     icon: Bath,
-    image: 'https://images.unsplash.com/photo-1749554666934-66f7c285d3b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmbHVzaGVyJTIwc2lwaG9ufGVufDB8fHx8MTc1NjU4NTc5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1733837305594-86d5929045fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNnx8dG9pbGV0JTIwc2lwaG9ufGVufDB8fHx8MTc1NjU4NTk0M3ww&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'toilet repair',
   },
     {
