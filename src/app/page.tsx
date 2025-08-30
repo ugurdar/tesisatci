@@ -36,7 +36,7 @@ export default function Home() {
               <Image
                 src="https://picsum.photos/600/400"
                 alt="Tesisatçı, modern aletlerle mutfak lavabosunu tamir ediyor"
-                data-ai-hint="plumber kitchen sink"
+                data-ai-hint="plumber kitchen"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-xl aspect-[3/2] object-cover"
@@ -120,7 +120,7 @@ export default function Home() {
               <Image
                 src="https://picsum.photos/600/450"
                 alt="Gülümseyen bir tesisatçı, müşteriyle konuşuyor"
-                data-ai-hint="plumber talking customer"
+                data-ai-hint="plumber talking"
                 width={600}
                 height={450}
                 className="rounded-lg shadow-xl aspect-[4/3] object-cover"

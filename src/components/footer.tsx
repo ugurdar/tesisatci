@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-secondary">
       <div className="container mx-auto px-4 py-12 md:px-6">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2 font-bold text-primary text-xl">
               <Wrench className="h-6 w-6 text-accent" />
@@ -39,12 +39,6 @@ export function Footer() {
                 <Clock className="h-4 w-4 mt-1 text-primary" />
                 <span className="text-muted-foreground">7/24 Acil Servis</span>
               </li>
-            </ul>
-          </div>
-           <div>
-            <h3 className="mb-4 font-semibold text-foreground">Yönetici</h3>
-             <ul className="space-y-2 text-sm">
-              <li><Link href="/faq-builder" className="text-muted-foreground hover:text-primary">SSS Oluşturucu</Link></li>
             </ul>
           </div>
         </div>
