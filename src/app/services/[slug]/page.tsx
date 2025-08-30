@@ -35,7 +35,7 @@ const getService = (slug: string): Service | undefined => {
   return services.find((s) => s.slug === slug);
 };
 
-export default function ServicePage({ params }: Props) {
+export default async function ServicePage({ params }: Props) {
   const service = getService(params.slug);
 
   if (!service) {
