@@ -1,16 +1,18 @@
 'use client';
 
-import { Card, CardContent } from './ui/card';
-
 type MapProps = {
     center: { lat: number; lng: number };
 };
 
 export default function Map({ center }: MapProps) {
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-    // API key olmasa bile haritayı göstermek için `q` parametresini kullanan bir URL oluştur.
-    // Geliştirme sırasında "yalnızca geliştirme amaçlı" uyarısı görünecektir.
-    const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${apiKey || ''}&q=${center.lat},${center.lng}`;
+    // OpenStreetMap embed URL'si oluştur.
+    const viewBox = 0.005; // Haritanın ne kadar yakınlaştırılacağını belirler.
+    const left = center.lng - viewBox;
+    const bottom = center.lat - viewBox;
+    const right = center.lng + viewBox;
+    const top = center.lat + viewBox;
+
+    const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${left}%2C${bottom}%2C${right}%2C${top}&layer=mapnik&marker=${center.lat}%2C${center.lng}`;
 
     return (
         <iframe
@@ -21,6 +23,7 @@ export default function Map({ center }: MapProps) {
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
             src={mapSrc}
+            title="Konum Haritası"
         ></iframe>
     );
 }
