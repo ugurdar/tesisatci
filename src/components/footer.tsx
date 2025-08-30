@@ -29,7 +29,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1 text-primary" />
-                <span className="text-muted-foreground">Kırmızıtoprak, Yenipazar Sk., 26020 Odunpazarı/Eskişehir</span>
+                <span className="text-muted-foreground">Kırmızıtoprak, Ercan Sk., 26020 Odunpazarı/Eskişehir</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 mt-1 text-primary" />

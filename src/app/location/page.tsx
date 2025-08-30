@@ -9,8 +9,8 @@ export const metadata = {
 };
 
 export default function LocationPage() {
-    // Kırmızıtoprak, Yenipazar Sk., 26020 Odunpazarı/Eskişehir
-    const position = { lat: 39.7615, lng: 30.5218 }; 
+    // Kırmızıtoprak, Ercan Sk., 26020 Odunpazarı/Eskişehir
+    const position = { lat: 39.7597, lng: 30.5228 }; 
 
     return (
         <div className="py-16 md:py-24 bg-background">
@@ -29,7 +29,7 @@ export default function LocationPage() {
                             <div className="space-y-4 text-lg">
                                 <p className="flex items-start gap-3">
                                     <MapPin className="w-5 h-5 text-primary mt-1" />
-                                    <span>Kırmızıtoprak, Yenipazar Sk., 26020 Odunpazarı/Eskişehir</span>
+                                    <span>Kırmızıtoprak, Ercan Sk., 26020 Odunpazarı/Eskişehir</span>
                                 </p>
                                 <p className="flex items-start gap-3">
                                     <Phone className="w-5 h-5 text-primary mt-1" />

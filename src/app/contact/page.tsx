@@ -38,7 +38,7 @@ export default function ContactPage() {
                                 <MapPin className="w-6 h-6 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-semibold">Adres</h3>
-                                    <p className="text-muted-foreground">Kırmızıtoprak, Yenipazar Sk., 26020 Odunpazarı/Eskişehir</p>
+                                    <p className="text-muted-foreground">Kırmızıtoprak, Ercan Sk., 26020 Odunpazarı/Eskişehir</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
