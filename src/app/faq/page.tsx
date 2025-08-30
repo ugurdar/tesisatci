@@ -20,10 +20,6 @@ const faqItems = [
         answer: "Fiyatlandırmamız gereken hizmete göre değişmektedir. Şeffaflığa inanıyoruz, bu nedenle herhangi bir işe başlamadan önce net ve dürüst bir fiyatlandırma sunuyoruz. Ayrıntılı bir tahmin için lütfen bir inceleme planlamak üzere bizimle iletişime geçin."
     },
     {
-        question: "Tesisatçılarınız lisanslı ve sigortalı mı?",
-        answer: "Evet, kesinlikle. Hüner Tesisat'taki tüm teknisyenlerimiz tamamen lisanslı, sigortalı ve yüksek eğitimli profesyonellerdir. Mülkünüzün güvenli ve yetenekli ellerde olduğunu bilerek içiniz rahat olabilir."
-    },
-    {
         question: "Giderlerimin tıkanmasını nasıl önleyebilirim?",
         answer: "Tıkanmaları önlemek için mutfak lavabonuza yağ, kahve telvesi ve lifli yiyecek atıkları dökmekten kaçının. Duş ve küvetlerde saçı yakalamak için bir gider süzgeci kullanın. Ayrıca önleyici bir tedbir olarak düzenli profesyonel gider temizliği planlamanızı öneririz."
     },
