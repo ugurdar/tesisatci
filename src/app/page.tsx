@@ -118,7 +118,7 @@ export default function Home() {
             </div>
             <div>
               <Image
-                src="https://picsum.photos/600/450"
+                src="https://images.unsplash.com/photo-1545193329-4a052e14eb8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaXBlc3xlbnwwfHx8fDE3NTY1ODU1MDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Gülümseyen bir tesisatçı, müşteriyle konuşuyor"
                 data-ai-hint="plumber talking"
                 width={600}
