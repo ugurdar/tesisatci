@@ -13,20 +13,36 @@ export const metadata = {
 const faqItems = [
     {
         question: "Bir sıhhi tesisat acil durumunda ne yapmalıyım?",
-        answer: "Su borusu patlaması gibi bir acil durumda, daha fazla hasarı önlemek için ilk yapmanız gereken ana su vanasını kapatmaktır. Ardından, hemen 0536 588 38 72 numaralı telefondan bizi arayın. 7/24 acil servis hizmeti sunuyoruz."
+        answer: "Su borusu patlaması gibi bir acil durumda, daha fazla hasarı önlemek için ilk yapmanız gereken ana su vanasını kapatmaktır. Ardından, hemen 0536 588 38 72 numaralı telefondan bizi arayın. Eskişehir geneline 7/24 acil servis hizmeti sunuyoruz."
     },
     {
         question: "Hizmetlerinizin maliyeti ne kadar?",
-        answer: "Fiyatlandırmamız gereken hizmete göre değişmektedir. Şeffaflığa inanıyoruz, bu nedenle herhangi bir işe başlamadan önce net ve dürüst bir fiyatlandırma sunuyoruz. Ayrıntılı bir tahmin için lütfen bir inceleme planlamak üzere bizimle iletişime geçin."
+        answer: "Fiyatlandırmamız, yapılacak işin türüne ve karmaşıklığına göre değişmektedir. Şeffaflığa inanıyoruz, bu nedenle herhangi bir işe başlamadan önce net ve dürüst bir fiyatlandırma sunuyoruz. Ücretsiz keşif ve ayrıntılı bir fiyat teklifi için lütfen bizimle iletişime geçin."
+    },
+    {
+        question: "Eskişehir'de su kaçağı tespiti için termal kamera kullanıyor musunuz?",
+        answer: "Evet. Eskişehir'deki su kaçağı tespit hizmetlerimizde, duvarlarınızı veya zeminlerinizi kırmadan sorunun kaynağını noktasal olarak bulmak için termal kamera ve akustik dinleme cihazları gibi en son teknolojileri kullanıyoruz. Bu yöntem, hem zaman hem de maliyet açısından büyük tasarruf sağlar."
     },
     {
         question: "Giderlerimin tıkanmasını nasıl önleyebilirim?",
-        answer: "Tıkanmaları önlemek için mutfak lavabonuza yağ, kahve telvesi ve lifli yiyecek atıkları dökmekten kaçının. Duş ve küvetlerde saçı yakalamak için bir gider süzgeci kullanın. Ayrıca önleyici bir tedbir olarak düzenli profesyonel gider temizliği planlamanızı öneririz."
+        answer: "Tıkanmaları önlemek için mutfak lavabonuza yağ, kahve telvesi ve lifli yiyecek atıkları dökmekten kaçının. Duş ve küvetlerde saçı yakalamak için bir gider süzgeci kullanın. Ayrıca, tesisat sisteminizin sağlığı için belirli aralıklarla profesyonel gider temizliği planlamanızı öneririz."
     },
     {
         question: "Hangi bölgelere hizmet veriyorsunuz?",
-        answer: "Eskişehir merkez ve çevresindeki ilçelere gururla hizmet veriyoruz. Belirli adresinizin hizmet aralığımız içinde olup olmadığını doğrulamak için Konum sayfamızdaki konum denetleyicisini kullanabilirsiniz."
+        answer: "Eskişehir merkez (Odunpazarı, Tepebaşı) ve çevresindeki ilçelere gururla hizmet veriyoruz. Belirli adresinizin hizmet aralığımız içinde olup olmadığını doğrulamak için Konum sayfamızdaki konum denetleyicisini kullanabilirsiniz."
     },
+    {
+        question: "Kombi bakımı ne sıklıkla yapılmalı ve neden önemlidir?",
+        answer: "Kombinizin verimli ve güvenli çalışması için yılda en az bir kez, kış aylarına girmeden önce profesyonel bakım yapılmasını tavsiye ediyoruz. Düzenli bakım, kombinizin ömrünü uzatır, arıza riskini azaltır ve doğalgaz faturalarınızda tasarruf etmenizi sağlar."
+    },
+    {
+        question: "Tuvaletim sürekli su akıtıyor, ne yapabilirim?",
+        answer: "Tuvaletin sürekli su akıtması genellikle iç takımdaki (rezervuar) bir sorundan kaynaklanır ve ciddi su israfına neden olabilir. Basit bir ayar veya parça değişimi ile sorun çözülebilir. Bu tür durumlarda, daha fazla su kaybını önlemek için profesyonel bir tesisatçıdan yardım almanızı öneririz."
+    },
+    {
+        question: "Petek temizliği ısınma verimliliğini gerçekten artırır mı?",
+        answer: "Kesinlikle. Zamanla peteklerin içinde biriken tortu ve kireç, suyun dolaşımını engelleyerek ısınma verimini düşürür. Özel makinelerle yapılan profesyonel petek temizliği, peteklerinizin her yerinin eşit ve daha hızlı ısınmasını sağlar, bu da hem konforunuzu artırır hem de yakıt maliyetlerinizi düşürür."
+    }
 ];
 
 
