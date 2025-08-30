@@ -1,4 +1,4 @@
-import { type LucideIcon, Wrench, Droplets, ShieldCheck, Heater, Wind, Pipette } from 'lucide-react';
+import { type LucideIcon, Wrench, Droplets, ShieldCheck, Heater, Wind, Pipette, Bath, ThermometerSnowflake, Cog, Construction } from 'lucide-react';
 
 export interface Service {
   slug: string;
@@ -10,45 +10,66 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: 'emergency-plumbing',
-    title: 'Emergency Plumbing',
-    description: '24/7 rapid response for all plumbing emergencies.',
-    longDescription: 'Our emergency plumbing team is available 24/7 to handle any crisis, from burst pipes to severe clogs. We guarantee a rapid response to minimize damage and restore your plumbing system as quickly as possible. Our vans are fully stocked to handle most repairs on the first visit.',
-    icon: ShieldCheck,
+    slug: 'tikaniklik-acma',
+    title: 'Tıkanıklık Açma',
+    description: 'Robot cihazlarla kırmadan tıkalı gider ve pimaş açma hizmeti.',
+    longDescription: 'Mutfak, banyo ve tuvalet giderlerinizde oluşan tıkanıklıkları, modern robot cihazlar kullanarak kırmadan ve dökmeden açıyoruz. Kameralı sistemlerle sorunun kaynağını tespit edip kalıcı çözümler sunuyoruz.',
+    icon: Wrench,
   },
   {
-    slug: 'drain-cleaning',
-    title: 'Drain Cleaning',
-    description: 'Expert cleaning for clogged and slow drains.',
-    longDescription: 'Using state-of-the-art equipment, we can clear any blockage in your drains, from kitchen sinks to main sewer lines. We offer hydro-jetting services for a thorough clean that removes grease, scale, and other debris, preventing future clogs and ensuring smooth flow.',
-    icon: Droplets,
-  },
-  {
-    slug: 'water-heater-services',
-    title: 'Water Heater Services',
-    description: 'Installation, repair, and maintenance of water heaters.',
-    longDescription: 'Whether you have a traditional tank or a modern tankless water heater, our certified technicians can handle it all. We provide expert installation, timely repairs, and preventative maintenance to ensure you always have reliable access to hot water.',
-    icon: Heater,
-  },
-  {
-    slug: 'leak-detection',
-    title: 'Leak Detection & Repair',
-    description: 'Advanced detection and repair of hidden water leaks.',
-    longDescription: 'Hidden water leaks can cause significant damage to your property. We use non-invasive, advanced technology like acoustic sensors and thermal imaging to accurately locate leaks behind walls, under floors, and in your foundation. Once found, we offer efficient and lasting repair solutions.',
+    slug: 'su-kacak-tespiti',
+    title: 'Su Kaçak Tespiti ve Onarımı',
+    description: 'Termal kamera ve akustik dinleme cihazları ile noktasal kaçak tespiti.',
+    longDescription: 'Evinizde veya iş yerinizde oluşan gizli su kaçaklarını, son teknoloji termal kameralar ve akustik dinleme cihazları ile noktasal olarak tespit ediyoruz. Gereksiz kırma dökme yapmadan, sadece sorunlu bölgeye müdahale ederek hızlı ve etkili onarım sağlıyoruz.',
     icon: Pipette,
   },
   {
-    slug: 'gas-line-services',
-    title: 'Gas Line Services',
-    description: 'Safe installation and repair of gas lines.',
-    longDescription: 'Our licensed professionals are trained to safely install, repair, and maintain gas lines for your appliances. We adhere to the strictest safety codes to protect your home and family. If you suspect a gas leak, call us immediately for emergency service.',
-    icon: Wind,
+    slug: 'boru-tamiri-tesisat-yenileme',
+    title: 'Boru Tamiri ve Tesisat Yenileme',
+    description: 'Patlak boru tamiri, eskiyen tesisatın modern malzemelerle yenilenmesi.',
+    longDescription: 'Zamanla yıpranmış, paslanmış veya patlamış su borularınızı onarıyor, gerekirse tüm tesisat sisteminizi günümüz standartlarına uygun, uzun ömürlü ve sağlıklı malzemelerle yeniliyoruz. Kaliteli işçilikle garantili çözümler sunuyoruz.',
+    icon: Construction,
   },
   {
-    slug: 'fixture-installation',
-    title: 'Fixture Installation',
-    description: 'Professional installation of faucets, toilets, and sinks.',
-    longDescription: 'Upgrade your kitchen or bathroom with our professional fixture installation services. We can install a wide range of fixtures, including faucets, sinks, toilets, and showerheads, ensuring a perfect fit and leak-free operation for years to come.',
-    icon: Wrench,
+    slug: 'musluk-batarya-degisimi',
+    title: 'Musluk ve Batarya Değişimi',
+    description: 'Her marka ve model musluk, batarya montajı ve tamiri.',
+    longDescription: 'Banyo ve mutfağınızdaki arızalı veya eski musluk ve bataryalarınızı, isteğiniz doğrultusunda yeni ve modern ürünlerle değiştiriyoruz. Su tasarrufu sağlayan, estetik ve fonksiyonel batarya montaj hizmetleri sunuyoruz.',
+    icon: Droplets,
+  },
+  {
+    slug: 'sifon-klozet-tamiri',
+    title: 'Sifon ve Klozet Tamiri',
+    description: 'Klozet iç takım değişimi, sifon tamiri ve montaj hizmetleri.',
+    longDescription: 'Klozetinizdeki su sızıntıları, dolum sorunları veya sifon arızaları için profesyonel tamir ve değişim hizmeti veriyoruz. Gömme ve normal klozetlerin iç takımlarını yenileyerek hem su israfını önlüyor hem de sorunsuz bir kullanım sağlıyoruz.',
+    icon: Bath,
+  },
+  {
+    slug: 'mekanik-tesisat',
+    title: 'Mekanik Tesisat',
+    description: 'Bina ve endüstriyel tesisler için mekanik tesisat çözümleri.',
+    longDescription: 'Isıtma, soğutma, havalandırma, yangın tesisatı ve sıhhi tesisat gibi binanızın tüm mekanik sistemlerinin projelendirilmesi, kurulumu ve bakımını yapıyoruz. Mühendislik ilkelerine uygun, verimli ve güvenilir sistemler kuruyoruz.',
+    icon: Cog,
+  },
+  {
+    slug: 'isitma-sistemleri',
+    title: 'Isıtma Sistemleri',
+    description: 'Kalorifer tesisatı, yerden ısıtma sistemleri kurulum ve onarımı.',
+    longDescription: 'Konforlu ve verimli bir ısınma için kalorifer tesisatı, yerden ısıtma gibi modern ısıtma sistemlerinin kurulumunu ve bakımını gerçekleştiriyoruz. Evinizin veya iş yerinizin yapısına en uygun ısıtma çözümünü projelendirip uyguluyoruz.',
+    icon: ThermometerSnowflake,
+  },
+  {
+    slug: 'kombi-bakim-petek-temizligi',
+    title: 'Kombi Bakım ve Petek Temizliği',
+    description: 'Kombinizin verimliliğini artırmak ve yakıt tasarrufu için profesyonel bakım.',
+    longDescription: 'Kombinizin periyodik bakımını yaparak daha verimli çalışmasını ve ömrünün uzamasını sağlıyoruz. Özel kimyasallar ve makinelerle peteklerinizi temizleyerek ısı transferini artırıyor, daha az doğalgaz faturası ile daha iyi ısınmanızı sağlıyoruz.',
+    icon: Heater,
+  },
+  {
+    slug: 'sihhi-tesisat',
+    title: 'Sıhhi Tesisat',
+    description: 'Temiz ve pis su tesisatı kurulumu, tamiri ve yenileme işlemleri.',
+    longDescription: 'Binaların temiz su (kullanım suyu) ve pis su (atık su) tesisatlarının projelendirilmesi, uygulanması, onarımı ve yenilenmesi hizmetlerini kapsar. Sağlıklı ve sorunsuz bir altyapı için kaliteli malzeme ve uzman işçilik sunuyoruz.',
+    icon: ShieldCheck,
   },
 ];

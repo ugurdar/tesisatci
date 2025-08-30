@@ -21,13 +21,13 @@ export async function generateMetadata({ params }: Props) {
 
   if (!service) {
     return {
-      title: 'Service Not Found',
+      title: 'Hizmet Bulunamadı',
     };
   }
 
   return {
-    title: `${service.title} | PlumbPro Connect`,
-    description: service.description,
+    title: `${service.title} | Hüner Tesisat`,
+    description: service.longDescription,
   };
 }
 
@@ -51,7 +51,7 @@ export default function ServicePage({ params }: Props) {
             <Button variant="ghost" asChild>
                 <Link href="/services">
                     <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back to All Services
+                    Tüm Hizmetlere Geri Dön
                 </Link>
             </Button>
         </div>
@@ -70,7 +70,7 @@ export default function ServicePage({ params }: Props) {
             </div>
             <Image
               src={`https://picsum.photos/800/400?random=${service.slug}`}
-              alt={`Image illustrating ${service.title}`}
+              alt={`${service.title} hizmetini gösteren resim`}
               data-ai-hint="plumbing service"
               width={800}
               height={400}
@@ -83,18 +83,18 @@ export default function ServicePage({ params }: Props) {
           <div className="space-y-8">
             <Card className="bg-primary/5">
               <CardHeader>
-                <CardTitle className="font-headline text-primary">Need this service?</CardTitle>
+                <CardTitle className="font-headline text-primary">Bu hizmete mi ihtiyacınız var?</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground">Contact us today for a free quote on {service.title}.</p>
+                <p className="text-muted-foreground">{service.title} hizmeti için ücretsiz teklif almak üzere bugün bize ulaşın.</p>
                 <Button asChild className="w-full" size="lg">
-                  <Link href="/contact">Get a Quote</Link>
+                  <Link href="/contact">Teklif Al</Link>
                 </Button>
               </CardContent>
             </Card>
              <Card>
               <CardHeader>
-                <CardTitle className="font-headline">Other Services</CardTitle>
+                <CardTitle className="font-headline">Diğer Hizmetler</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">

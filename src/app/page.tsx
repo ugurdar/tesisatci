@@ -14,21 +14,20 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight">
-                Reliable Plumbing, Right When You Need It.
+                Güvenilir Tesisat, Tam İhtiyacınız Olduğunda.
               </h1>
               <p className="text-lg text-foreground/80">
-                PlumbPro Connect offers top-tier plumbing solutions for your home
-                and business. Fast, efficient, and always professional.
+                Hüner Tesisat, eviniz ve iş yeriniz için birinci sınıf sıhhi tesisat çözümleri sunar. Hızlı, verimli ve her zaman profesyonel.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild>
                   <Link href="/contact">
-                    Schedule a Service <ArrowRight className="ml-2" />
+                    Servis Talep Et <ArrowRight className="ml-2" />
                   </Link>
                 </Button>
                 <Button size="lg" variant="secondary" asChild>
-                  <a href="tel:123-456-7890">
-                    <Phone className="mr-2" /> Emergency Call
+                  <a href="tel:05365883872">
+                    <Phone className="mr-2" /> Acil Durum Çağrısı
                   </a>
                 </Button>
               </div>
@@ -36,8 +35,8 @@ export default function Home() {
             <div>
               <Image
                 src="https://picsum.photos/600/400"
-                alt="Professional plumber at work"
-                data-ai-hint="plumber working"
+                alt="Termal kamera ile su kaçağı tespiti yapan uzman"
+                data-ai-hint="thermal camera leak detection"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-xl aspect-[3/2] object-cover"
@@ -51,14 +50,14 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">
-              Our Services
+              Hizmetlerimiz
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We offer a comprehensive range of plumbing services to meet all your needs.
+              Tüm ihtiyaçlarınızı karşılamak için kapsamlı bir sıhhi tesisat hizmetleri yelpazesi sunuyoruz.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
+            {services.slice(0, 6).map((service) => (
               <Card
                 key={service.slug}
                 className="flex flex-col hover:shadow-lg transition-shadow duration-300"
@@ -73,7 +72,7 @@ export default function Home() {
                   <p className="text-muted-foreground flex-grow">{service.description}</p>
                   <Button variant="link" asChild className="p-0 h-auto mt-4 self-start">
                     <Link href={`/services/${service.slug}`}>
-                      Learn More <ArrowRight className="ml-2" />
+                      Daha Fazla Bilgi <ArrowRight className="ml-2" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -88,31 +87,31 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
                <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">
-                Why Choose PlumbPro Connect?
+                Neden Hüner Tesisat?
               </h2>
               <p className="text-lg text-foreground/80">
-                We are committed to providing the highest quality service and ensuring your complete satisfaction.
+                En yüksek kalitede hizmet sunmayı ve tam memnuniyetinizi sağlamayı taahhüt ediyoruz.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-4">
                   <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold">24/7 Emergency Service</h4>
-                    <p className="text-muted-foreground">Always available for your most urgent plumbing issues.</p>
+                    <h4 className="font-semibold">7/24 Acil Servis</h4>
+                    <p className="text-muted-foreground">En acil sıhhi tesisat sorunlarınız için her zaman hizmetinizdeyiz.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold">Licensed & Insured</h4>
-                    <p className="text-muted-foreground">Our team consists of certified professionals you can trust.</p>
+                    <h4 className="font-semibold">Lisanslı ve Sigortalı</h4>
+                    <p className="text-muted-foreground">Ekibimiz, güvenebileceğiniz sertifikalı profesyonellerden oluşmaktadır.</p>
                   </div>
                 </li>
                  <li className="flex items-start gap-4">
                   <CheckCircle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold">Upfront Pricing</h4>
-                    <p className="text-muted-foreground">No hidden fees. We provide clear, honest pricing before work begins.</p>
+                    <h4 className="font-semibold">Şeffaf Fiyatlandırma</h4>
+                    <p className="text-muted-foreground">Gizli ücret yok. İşe başlamadan önce net ve dürüst fiyatlandırma sağlıyoruz.</p>
                   </div>
                 </li>
               </ul>
@@ -120,8 +119,8 @@ export default function Home() {
             <div>
               <Image
                 src="https://picsum.photos/600/450"
-                alt="Satisfied customer shaking hands with a plumber"
-                data-ai-hint="customer handshake"
+                alt="Tesisatçı patlak boruyu tamir ediyor"
+                data-ai-hint="plumber fixing pipe"
                 width={600}
                 height={450}
                 className="rounded-lg shadow-xl aspect-[4/3] object-cover"
@@ -134,14 +133,14 @@ export default function Home() {
        <section className="py-20 md:py-24">
         <div className="container mx-auto px-4 md:px-6 text-center">
            <h2 className="text-3xl md:text-4xl font-headline font-bold">
-            Ready for Professional Plumbing Solutions?
+            Profesyonel Tesisat Çözümlerine Hazır Mısınız?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4 mb-8">
-            Don't let plumbing problems disrupt your day. Contact us now for a free estimate and expert service.
+            Tesisat sorunlarının gününüzü mahvetmesine izin vermeyin. Ücretsiz fiyat teklifi ve uzman hizmet için şimdi bize ulaşın.
           </p>
           <Button size="lg" asChild>
             <Link href="/contact">
-              Get Your Free Estimate Today
+              Bugün Ücretsiz Teklif Alın
             </Link>
           </Button>
         </div>

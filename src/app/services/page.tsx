@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'Our Services | PlumbPro Connect',
-  description: 'Explore the wide range of professional plumbing services offered by PlumbPro Connect, from emergency repairs to fixture installations.',
+  title: 'Hizmetlerimiz | Hüner Tesisat',
+  description: 'Hüner Tesisat\'ın sunduğu tıkanıklık açma, su kaçağı tespiti, kombi bakımı gibi geniş kapsamlı profesyonel sıhhi tesisat hizmetlerini keşfedin.',
 };
 
 export default function ServicesPage() {
@@ -14,9 +14,9 @@ export default function ServicesPage() {
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 md:px-6 md:py-24">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Our Plumbing Services</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Tesisat Hizmetlerimiz</h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            We provide a full spectrum of expert plumbing services to ensure your home or business runs smoothly.
+            Evinizin veya iş yerinizin sorunsuz çalışmasını sağlamak için eksiksiz bir uzman sıhhi tesisat hizmetleri yelpazesi sunuyoruz.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function ServicesPage() {
                 <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
                 <Button variant="secondary" asChild className="mt-auto self-start">
                   <Link href={`/services/${service.slug}`}>
-                    View Details <ArrowRight className="ml-2 h-4 w-4" />
+                    Detayları Görüntüle <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>

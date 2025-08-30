@@ -42,8 +42,8 @@ const checkServiceAreaTool = ai.defineTool({
 },
 async (input) => {
   // TODO: replace with actual implementation
-  const supportedRegions = ["New York", "Los Angeles", "Chicago"];
-  return supportedRegions.some(region => input.address.includes(region));
+  const supportedRegions = ["Eskişehir", "Odunpazarı", "Tepebaşı"];
+  return supportedRegions.some(region => input.address.toLowerCase().includes(region.toLowerCase()));
 });
 
 const prompt = ai.definePrompt({
@@ -51,8 +51,10 @@ const prompt = ai.definePrompt({
   input: {schema: CheckServiceAreaInputSchema},
   output: {schema: CheckServiceAreaOutputSchema},
   tools: [checkServiceAreaTool],
-  prompt: `You are a service area checker. Check if the provided address is in the service area using the checkServiceArea tool.
+  prompt: `You are a service area checker for a plumbing company in Eskişehir, Turkey. Check if the provided address is in the service area using the checkServiceArea tool. The service area is Eskişehir and its central districts like Odunpazarı and Tepebaşı.
 
+  The list of supported regions will always be "Eskişehir, Odunpazarı, Tepebaşı". Set this in the output.
+  
   Address: {{{address}}}
 `,
 });
@@ -65,6 +67,9 @@ const checkServiceAreaFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
+    if (output) {
+      output.supportedRegions = ["Eskişehir", "Odunpazarı", "Tepebaşı"];
+    }
     return output!;
   }
 );

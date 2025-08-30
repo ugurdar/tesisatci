@@ -21,7 +21,7 @@ function SubmitButton() {
     return (
         <Button type="submit" disabled={pending}>
             {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Search className="mr-2 h-4 w-4" />}
-            Check
+            Kontrol Et
         </Button>
     );
 }
@@ -50,7 +50,7 @@ export default function LocationFinder() {
                     <div className="flex gap-2">
                         <Input
                             name="address"
-                            placeholder="Enter your full address"
+                            placeholder="Tam adresinizi girin"
                             required
                             className="flex-grow"
                         />
@@ -61,7 +61,7 @@ export default function LocationFinder() {
                 {error && (
                     <Alert variant="destructive" className="mt-4">
                         <XCircle className="h-4 w-4" />
-                        <AlertTitle>Error</AlertTitle>
+                        <AlertTitle>Hata</AlertTitle>
                         <AlertDescription>{error}</AlertDescription>
                     </Alert>
                 )}
@@ -70,13 +70,13 @@ export default function LocationFinder() {
                     <Alert variant={result.isWithinServiceArea ? 'default' : 'destructive'} className="mt-4 bg-opacity-20">
                          {result.isWithinServiceArea ? <CheckCircle className="h-4 w-4" /> : <XCircle className="h-4 w-4" />}
                         <AlertTitle>
-                            {result.isWithinServiceArea ? "Great News!" : "Service Not Available"}
+                            {result.isWithinServiceArea ? "Harika Haber!" : "Servis Mevcut Değil"}
                         </AlertTitle>
                         <AlertDescription>
                             {result.isWithinServiceArea
-                                ? "Your address is within our service area. We look forward to helping you!"
-                                : "Unfortunately, your address is outside our current service area."}
-                            <p className="text-xs mt-2">Supported regions: {result.supportedRegions?.join(', ')}.</p>
+                                ? "Adresiniz servis alanımız içinde. Size yardımcı olmayı dört gözle bekliyoruz!"
+                                : "Maalesef, adresiniz mevcut servis alanımızın dışında."}
+                            <p className="text-xs mt-2">Desteklenen bölgeler: {result.supportedRegions?.join(', ')}.</p>
                         </AlertDescription>
                     </Alert>
                 )}

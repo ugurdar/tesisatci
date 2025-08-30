@@ -15,10 +15,10 @@ import { useToast } from '@/hooks/use-toast';
 import { handleContactForm } from '@/lib/actions';
 
 const ContactSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
+  name: z.string().min(2, { message: 'İsim en az 2 karakter olmalıdır.' }),
+  email: z.string().email({ message: 'Lütfen geçerli bir e-posta girin.' }),
   phone: z.string().optional(),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  message: z.string().min(10, { message: 'Mesaj en az 10 karakter olmalıdır.' }),
 });
 
 type ContactFormValues = z.infer<typeof ContactSchema>;
@@ -28,7 +28,7 @@ function SubmitButton() {
     return (
         <Button type="submit" disabled={pending} className="w-full">
             {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
-            Send Message
+            Mesaj Gönder
         </Button>
     );
 }
@@ -50,8 +50,8 @@ export default function ContactForm() {
         if (state.message) {
             if (state.success) {
                 toast({
-                    title: "Message Sent!",
-                    description: "Thank you for contacting us. We'll get back to you shortly.",
+                    title: "Mesaj Gönderildi!",
+                    description: "Bizimle iletişime geçtiğiniz için teşekkür ederiz. Kısa süre içinde size geri döneceğiz.",
                 });
                 reset();
             } else if (state.errors) {
@@ -65,23 +65,23 @@ export default function ContactForm() {
     return (
         <form action={formAction} className="space-y-4">
             <div>
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" {...register('name')} placeholder="John Doe" />
+                <Label htmlFor="name">İsim</Label>
+                <Input id="name" {...register('name')} placeholder="Adınız Soyadınız" />
                 {allErrors.name && <p className="text-sm text-destructive mt-1">{allErrors.name.message || allErrors.name[0]}</p>}
             </div>
             <div>
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" {...register('email')} placeholder="john@example.com" />
+                <Input id="email" type="email" {...register('email')} placeholder="ornek@example.com" />
                 {allErrors.email && <p className="text-sm text-destructive mt-1">{allErrors.email.message || allErrors.email[0]}</p>}
             </div>
             <div>
-                <Label htmlFor="phone">Phone (Optional)</Label>
-                <Input id="phone" {...register('phone')} placeholder="(123) 456-7890" />
+                <Label htmlFor="phone">Telefon (İsteğe bağlı)</Label>
+                <Input id="phone" {...register('phone')} placeholder="(5xx) xxx xx xx" />
                  {allErrors.phone && <p className="text-sm text-destructive mt-1">{allErrors.phone.message || allErrors.phone[0]}</p>}
             </div>
             <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" {...register('message')} placeholder="How can we help you today?" rows={4} />
+                <Label htmlFor="message">Mesaj</Label>
+                <Textarea id="message" {...register('message')} placeholder="Bugün size nasıl yardımcı olabiliriz?" rows={4} />
                  {allErrors.message && <p className="text-sm text-destructive mt-1">{allErrors.message.message || allErrors.message[0]}</p>}
             </div>
             <SubmitButton />

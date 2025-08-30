@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/sheet"
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/location', label: 'Location' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Ana Sayfa' },
+  { href: '/services', label: 'Hizmetler' },
+  { href: '/location', label: 'Konum' },
+  { href: '/faq', label: 'SSS' },
+  { href: '/contact', label: 'İletişim' },
 ];
 
 export function Header() {
@@ -22,7 +22,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-primary text-xl">
           <Wrench className="h-6 w-6 text-accent" />
-          <span className="font-headline">PlumbPro Connect</span>
+          <span className="font-headline">Hüner Tesisat</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -37,13 +37,13 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-2">
            <Button asChild className="hidden sm:inline-flex">
-            <Link href="/contact">Get a Quote</Link>
+            <Link href="/contact">Teklif Al</Link>
           </Button>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Open navigation menu</span>
+                <span className="sr-only">Navigasyon menüsünü aç</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
@@ -51,12 +51,12 @@ export function Header() {
                 <div className="flex items-center justify-between border-b pb-4">
                   <Link href="/" className="flex items-center gap-2 font-bold text-primary">
                     <Wrench className="h-5 w-5 text-accent" />
-                    <span>PlumbPro Connect</span>
+                    <span>Hüner Tesisat</span>
                   </Link>
                   <SheetClose asChild>
                      <Button variant="ghost" size="icon">
                         <X className="h-5 w-5" />
-                        <span className="sr-only">Close menu</span>
+                        <span className="sr-only">Menüyü kapat</span>
                      </Button>
                   </SheetClose>
                 </div>
@@ -75,7 +75,7 @@ export function Header() {
                 <div className="mt-auto">
                   <SheetClose asChild>
                     <Button asChild className="w-full">
-                      <Link href="/contact">Get a Quote</Link>
+                      <Link href="/contact">Teklif Al</Link>
                     </Button>
                   </SheetClose>
                 </div>

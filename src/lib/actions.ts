@@ -6,10 +6,10 @@ import { checkServiceArea } from '@/ai/flows/location-finder';
 
 // Contact Form
 const ContactSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
+  name: z.string().min(2, { message: 'İsim en az 2 karakter olmalıdır.' }),
+  email: z.string().email({ message: 'Lütfen geçerli bir e-posta girin.' }),
   phone: z.string().optional(),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  message: z.string().min(10, { message: 'Mesaj en az 10 karakter olmalıdır.' }),
 });
 
 export async function handleContactForm(prevState: any, formData: FormData) {
@@ -23,29 +23,29 @@ export async function handleContactForm(prevState: any, formData: FormData) {
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Error: Please check the form fields.',
+      message: 'Hata: Lütfen form alanlarını kontrol edin.',
       success: false,
     };
   }
 
-  // Here you would typically send an email or save to a database.
-  console.log('Contact form submitted:', validatedFields.data);
+  // Burada tipik olarak bir e-posta gönderir veya veritabanına kaydedersiniz.
+  console.log('İletişim formu gönderildi:', validatedFields.data);
 
-  return { message: 'Success! Your message has been sent.', errors: {}, success: true };
+  return { message: 'Başarılı! Mesajınız gönderildi.', errors: {}, success: true };
 }
 
 
 // Location Finder
 export async function handleLocationCheck(address: string) {
   if (!address || address.trim().length < 5) {
-    return { error: 'Please enter a valid address.' };
+    return { error: 'Lütfen geçerli bir adres girin.' };
   }
   try {
     const result = await checkServiceArea({ address });
     return { data: result };
   } catch (e) {
     console.error(e);
-    return { error: 'Could not check service area. Please try again later.' };
+    return { error: 'Servis alanı kontrol edilemedi. Lütfen daha sonra tekrar deneyin.' };
   }
 }
 
@@ -53,7 +53,7 @@ export async function handleLocationCheck(address: string) {
 // FAQ Builder
 export async function handleFaqGeneration(serviceOfferings: string, regionalPlumbingCodes: string) {
   if (!serviceOfferings || !regionalPlumbingCodes) {
-    return { error: 'Both fields are required to generate the FAQ.' };
+    return { error: 'SSS oluşturmak için her iki alan da gereklidir.' };
   }
 
   try {
@@ -61,6 +61,6 @@ export async function handleFaqGeneration(serviceOfferings: string, regionalPlum
     return { data: result };
   } catch (e) {
     console.error(e);
-    return { error: 'Could not generate FAQ. Please try again later.' };
+    return { error: 'SSS oluşturulamadı. Lütfen daha sonra tekrar deneyin.' };
   }
 }

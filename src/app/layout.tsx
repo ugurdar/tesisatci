@@ -7,8 +7,8 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'PlumbPro Connect | Your Reliable Plumbing Partner',
-  description: 'Expert plumbing services for residential and commercial needs. From emergency repairs to new installations, PlumbPro Connect has you covered.',
+  title: 'Hüner Tesisat | Eskişehir Güvenilir Tesisatçı',
+  description: 'Eskişehirde acil tesisat tamiri, su kaçağı tespiti, tıkanıklık açma ve kombi bakımı gibi profesyonel sıhhi tesisat hizmetleri. Hızlı ve güvenilir çözümler.',
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="tr" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
