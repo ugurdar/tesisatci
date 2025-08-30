@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import LocationFinder from '@/components/location-finder';
 import Map from '@/components/map';
 import { Suspense } from 'react';
@@ -29,7 +29,7 @@ export default function LocationPage() {
                             <LocationFinder />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-headline font-semibold mb-4">Ofisimiz</h2>
+                            <h2 className="text-2xl font-headline font-semibold mb-4">İletişim</h2>
                             <div className="space-y-4 text-lg">
                                 <p className="flex items-start gap-3">
                                     <MapPin className="w-5 h-5 text-primary mt-1" />
@@ -38,10 +38,6 @@ export default function LocationPage() {
                                 <p className="flex items-start gap-3">
                                     <Phone className="w-5 h-5 text-primary mt-1" />
                                     <a href="tel:05365883872" className="hover:text-primary">0536 588 38 72</a>
-                                </p>
-                                <p className="flex items-start gap-3">
-                                    <Mail className="w-5 h-5 text-primary mt-1" />
-                                    <a href="mailto:contact@plumbpro.connect" className="hover:text-primary">contact@plumbpro.connect</a>
                                 </p>
                             </div>
                         </div>

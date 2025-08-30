@@ -1,6 +1,5 @@
 'use client';
 
-import { APIProvider, Map as GoogleMap, Marker } from '@vis.gl/react-google-maps';
 import { Card, CardContent } from './ui/card';
 
 type MapProps = {
@@ -9,6 +8,10 @@ type MapProps = {
 
 export default function Map({ center }: MapProps) {
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+    const mapSrc = apiKey
+        ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${center.lat},${center.lng}`
+        : `https://www.google.com/maps/embed/v1/place?q=${center.lat},${center.lng}`;
+
 
     if (!apiKey) {
         return (
@@ -16,8 +19,8 @@ export default function Map({ center }: MapProps) {
                 <Card>
                     <CardContent className="pt-6">
                         <p className="text-center text-muted-foreground">
-                            Google Maps API Key is missing. <br />
-                            Please add NEXT_PUBLIC_GOOGLE_MAPS_API_KEY to your environment variables.
+                            Google Maps API Anahtarı eksik. <br />
+                            Lütfen ortam değişkenlerinize NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ekleyin.
                         </p>
                     </CardContent>
                 </Card>
@@ -26,16 +29,14 @@ export default function Map({ center }: MapProps) {
     }
 
     return (
-        <APIProvider apiKey={apiKey}>
-            <GoogleMap
-                defaultCenter={center}
-                defaultZoom={12}
-                gestureHandling={'greedy'}
-                disableDefaultUI={true}
-                mapId="plumbpro_map"
-            >
-                <Marker position={center} />
-            </GoogleMap>
-        </APIProvider>
+        <iframe
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={mapSrc}
+        ></iframe>
     );
 }

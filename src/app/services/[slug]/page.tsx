@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, Check } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 type Props = {
   params: { slug: string };
@@ -69,9 +69,9 @@ export default function ServicePage({ params }: Props) {
               <p className="text-xl text-muted-foreground">{service.description}</p>
             </div>
             <Image
-              src={`https://picsum.photos/800/400?random=${service.slug}`}
+              src={service.image}
               alt={`${service.title} hizmetini gösteren resim`}
-              data-ai-hint="plumbing service"
+              data-ai-hint={service.aiHint}
               width={800}
               height={400}
               className="rounded-lg shadow-lg w-full object-cover aspect-video"

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Wrench, Phone, Mail, MapPin } from 'lucide-react';
+import { Wrench, Phone, MapPin, Clock } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
               <span className="font-headline">Hüner Tesisat</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Tüm sıhhi tesisat ihtiyaçlarınız için güvenilir ortağınız.
+              Eskişehir'in her noktasına 7/24 hizmet veren güvenilir tesisat ortağınız.
             </p>
           </div>
           <div>
@@ -25,26 +25,26 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 font-semibold text-foreground">Yönetici</h3>
-             <ul className="space-y-2 text-sm">
-              <li><Link href="/faq-builder" className="text-muted-foreground hover:text-primary">SSS Oluşturucu</Link></li>
-            </ul>
-          </div>
-          <div>
             <h3 className="mb-4 font-semibold text-foreground">İletişim Bilgileri</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1 text-primary" />
-                <span className="text-muted-foreground">Kırmızıtoprak, Yenipazar Sk., Odunpazarı/Eskişehir</span>
+                <span className="text-muted-foreground">Kırmızıtoprak, Yenipazar Sk., 26020 Odunpazarı/Eskişehir</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 mt-1 text-primary" />
                 <a href="tel:05365883872" className="text-muted-foreground hover:text-primary">0536 588 38 72</a>
               </li>
-              <li className="flex items-start gap-3">
-                <Mail className="h-4 w-4 mt-1 text-primary" />
-                <a href="mailto:contact@plumbpro.connect" className="text-muted-foreground hover:text-primary">contact@plumbpro.connect</a>
+               <li className="flex items-start gap-3">
+                <Clock className="h-4 w-4 mt-1 text-primary" />
+                <span className="text-muted-foreground">7/24 Acil Servis</span>
               </li>
+            </ul>
+          </div>
+           <div>
+            <h3 className="mb-4 font-semibold text-foreground">Yönetici</h3>
+             <ul className="space-y-2 text-sm">
+              <li><Link href="/faq-builder" className="text-muted-foreground hover:text-primary">SSS Oluşturucu</Link></li>
             </ul>
           </div>
         </div>

@@ -1,9 +1,9 @@
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Clock, MapPin } from 'lucide-react';
 import ContactForm from '@/components/contact-form';
 
 export const metadata = {
     title: 'İletişim | Hüner Tesisat',
-    description: 'Hüner Tesisat ile iletişime geçin. İletişim formumuzu kullanarak servis planlayın, soru sorun veya ücretsiz fiyat teklifi isteyin.',
+    description: 'Hüner Tesisat ile iletişime geçin. 7/24 acil servis için arayın, formumuzu kullanarak servis planlayın veya ücretsiz fiyat teklifi isteyin.',
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
                 <div className="max-w-3xl mx-auto text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Bize Ulaşın</h1>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        Tüm sıhhi tesisat ihtiyaçlarınızda size yardımcı olmak için buradayız. Aşağıdaki formu doldurun veya doğrudan bizimle iletişime geçin.
+                        Tüm sıhhi tesisat ihtiyaçlarınızda size yardımcı olmak için buradayız. Acil durumlar için bizi arayın veya diğer talepleriniz için aşağıdaki formu doldurun.
                     </p>
                 </div>
 
@@ -35,10 +35,10 @@ export default function ContactPage() {
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
-                                <Mail className="w-6 h-6 text-primary mt-1" />
+                                <MapPin className="w-6 h-6 text-primary mt-1" />
                                 <div>
-                                    <h3 className="font-semibold">Email</h3>
-                                    <a href="mailto:contact@plumbpro.connect" className="text-muted-foreground hover:text-primary">contact@plumbpro.connect</a>
+                                    <h3 className="font-semibold">Adres</h3>
+                                    <p className="text-muted-foreground">Kırmızıtoprak, Yenipazar Sk., 26020 Odunpazarı/Eskişehir</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -48,7 +48,7 @@ export default function ContactPage() {
                                     <p className="text-muted-foreground">Pazartesi - Cuma: 08:30 - 23:00</p>
                                     <p className="text-muted-foreground">Cumartesi: 08:30 - 23:00</p>
                                     <p className="text-muted-foreground">Pazar: 09:00 - 23:00</p>
-                                    <p className="text-muted-foreground">Acil Servisler: 7/24</p>
+                                    <p className="font-medium text-primary-foreground/90 mt-1">Acil Servisler: 7/24</p>
                                 </div>
                             </div>
                         </div>

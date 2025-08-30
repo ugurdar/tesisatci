@@ -7,15 +7,13 @@ import { checkServiceArea } from '@/ai/flows/location-finder';
 // Contact Form
 const ContactSchema = z.object({
   name: z.string().min(2, { message: 'İsim en az 2 karakter olmalıdır.' }),
-  email: z.string().email({ message: 'Lütfen geçerli bir e-posta girin.' }),
-  phone: z.string().optional(),
+  phone: z.string().min(10, { message: 'Lütfen geçerli bir telefon numarası girin.' }),
   message: z.string().min(10, { message: 'Mesaj en az 10 karakter olmalıdır.' }),
 });
 
 export async function handleContactForm(prevState: any, formData: FormData) {
   const validatedFields = ContactSchema.safeParse({
     name: formData.get('name'),
-    email: formData.get('email'),
     phone: formData.get('phone'),
     message: formData.get('message'),
   });

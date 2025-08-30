@@ -16,8 +16,7 @@ import { handleContactForm } from '@/lib/actions';
 
 const ContactSchema = z.object({
   name: z.string().min(2, { message: 'İsim en az 2 karakter olmalıdır.' }),
-  email: z.string().email({ message: 'Lütfen geçerli bir e-posta girin.' }),
-  phone: z.string().optional(),
+  phone: z.string().min(10, { message: 'Lütfen geçerli bir telefon numarası girin.' }),
   message: z.string().min(10, { message: 'Mesaj en az 10 karakter olmalıdır.' }),
 });
 
@@ -70,13 +69,8 @@ export default function ContactForm() {
                 {allErrors.name && <p className="text-sm text-destructive mt-1">{allErrors.name.message || allErrors.name[0]}</p>}
             </div>
             <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" {...register('email')} placeholder="ornek@example.com" />
-                {allErrors.email && <p className="text-sm text-destructive mt-1">{allErrors.email.message || allErrors.email[0]}</p>}
-            </div>
-            <div>
-                <Label htmlFor="phone">Telefon (İsteğe bağlı)</Label>
-                <Input id="phone" {...register('phone')} placeholder="(5xx) xxx xx xx" />
+                <Label htmlFor="phone">Telefon</Label>
+                <Input id="phone" {...register('phone')} placeholder="05XX XXX XX XX" />
                  {allErrors.phone && <p className="text-sm text-destructive mt-1">{allErrors.phone.message || allErrors.phone[0]}</p>}
             </div>
             <div>
