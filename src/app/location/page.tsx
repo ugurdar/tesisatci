@@ -1,5 +1,4 @@
 import { MapPin, Phone } from 'lucide-react';
-import LocationFinder from '@/components/location-finder';
 import Map from '@/components/map';
 import { Suspense } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -24,10 +23,6 @@ export default function LocationPage() {
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     <div className="space-y-8">
-                        <div>
-                            <h2 className="text-2xl font-headline font-semibold mb-4">Adresinizi Kontrol Edin</h2>
-                            <LocationFinder />
-                        </div>
                         <div>
                             <h2 className="text-2xl font-headline font-semibold mb-4">İletişim</h2>
                             <div className="space-y-4 text-lg">
