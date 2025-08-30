@@ -33,9 +33,9 @@ export const services: Service[] = [
     slug: 'boru-tamiri-tesisat-yenileme',
     title: 'Boru Tamiri ve Tesisat Yenileme',
     description: 'Patlak boru tamiri, eskiyen tesisatın modern ve kaliteli malzemelerle yenilenmesi.',
-    longDescription: 'Zamanla yıpranmış, paslanmış, kireçlenmiş veya patlamış su borularınızı garantili bir şekilde onarıyoruz. Gerekirse, tüm temiz veya pis su tesisat sisteminizi günümüz standartlarına uygun, uzun ömürlü ve sağlıklı malzemelerle komple yeniliyoruz.',
+    longDescription: 'Zamanla eskiyen, paslanan, kireçlenen veya beklenmedik bir anda patlayan su boruları, hem yaşam kalitenizi düşürür hem de mülkünüze ciddi zararlar verebilir. Düşük su basıncı, paslı su, sürekli tıkanmalar ve su sızıntıları gibi sorunlar, tesisatınızın yenilenme zamanının geldiğinin habercisidir. Hüner Tesisat olarak, eski demir veya kalitesiz plastik borulardan kaynaklanan tüm bu sorunlara son veriyoruz. Sadece patlak boru tamiri yapmakla kalmıyor, aynı zamanda tüm temiz ve pis su tesisat sisteminizi, günümüzün en modern, dayanıklı ve insan sağlığına uygun, uzun ömürlü polipropilen (PPRC) veya kompozit boru sistemleriyle komple yeniliyoruz. Bu yatırım, sadece mevcut sorunları çözmekle kalmaz, aynı zamanda evinizin değerini artırır, gelecekteki büyük tadilat masraflarından sizi kurtarır ve aileniz için daha sağlıklı bir yaşam ortamı sağlar. İşi uzmanına bırakın, tesisatınızı güvenle yenileyelim.',
     icon: Construction,
-    image: 'https://picsum.photos/800/400',
+    image: 'https://images.unsplash.com/photo-1722411487131-23bb3ac91df3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8cGlwZXN8ZW58MHx8fHwxNzU2NTg1NTAwfDA&ixlib=rb-4.1.0&q=80&w=1080',
     aiHint: 'pipe repair plumbing',
   },
   {
