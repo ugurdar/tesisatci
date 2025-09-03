@@ -6,8 +6,8 @@ const repo = 'tesisatci';
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
-  assetPrefix: isGithubActions ? `/${repo}/` : undefined,
-  basePath: isGithubActions ? `/${repo}` : undefined,
+  assetPrefix: isGithubActions ? `/${repo}/` : '',
+  basePath: isGithubActions ? `/${repo}` : '',
   typescript: {
     ignoreBuildErrors: true,
   },

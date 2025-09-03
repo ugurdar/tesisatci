@@ -1,8 +1,23 @@
 'use server';
 
 import { z } from 'zod';
-import { generateFAQ } from '@/ai/flows/ai-powered-faq-builder';
-import { checkServiceArea } from '@/ai/flows/location-finder';
+
+// This is a static export, so server-side AI flows will not work.
+// We are keeping the file to avoid breaking imports, but the functions will not be called.
+
+// import { generateFAQ } from '@/ai/flows/ai-powered-faq-builder';
+// import { checkServiceArea } from '@/ai/flows/location-finder';
+
+async function generateFAQ(input: any): Promise<any> {
+    console.warn('AI features are disabled in static export mode.');
+    return { faqDraft: 'AI features are disabled in this version of the site.' };
+}
+
+async function checkServiceArea(input: any): Promise<any> {
+    console.warn('AI features are disabled in static export mode.');
+    return { isWithinServiceArea: false, supportedRegions: ['AI feature disabled'] };
+}
+
 
 // Contact Form
 const ContactSchema = z.object({
@@ -12,53 +27,27 @@ const ContactSchema = z.object({
 });
 
 export async function handleContactForm(prevState: any, formData: FormData) {
-  const validatedFields = ContactSchema.safeParse({
-    name: formData.get('name'),
-    phone: formData.get('phone'),
-    message: formData.get('message'),
-  });
-
-  if (!validatedFields.success) {
-    return {
-      errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Hata: Lütfen form alanlarını kontrol edin.',
-      success: false,
+  // Static export does not support server actions. This will not run on GitHub Pages.
+  console.warn('Contact form submission is disabled in static export mode.');
+  return { 
+      message: 'Bu özellik şu anda aktif değil.', 
+      errors: { form: ['Bu form statik sitede çalışmaz.'] }, 
+      success: false 
     };
-  }
-
-  // Burada tipik olarak bir e-posta gönderir veya veritabanına kaydedersiniz.
-  console.log('İletişim formu gönderildi:', validatedFields.data);
-
-  return { message: 'Başarılı! Mesajınız gönderildi.', errors: {}, success: true };
 }
 
 
 // Location Finder
 export async function handleLocationCheck(address: string) {
-  if (!address || address.trim().length < 5) {
-    return { error: 'Lütfen geçerli bir adres girin.' };
-  }
-  try {
-    const result = await checkServiceArea({ address });
-    return { data: result };
-  } catch (e) {
-    console.error(e);
-    return { error: 'Servis alanı kontrol edilemedi. Lütfen daha sonra tekrar deneyin.' };
-  }
+  // Static export does not support server actions.
+  console.warn('Location check is disabled in static export mode.');
+  return { error: 'Bu özellik şu anda aktif değil.' };
 }
 
 
 // FAQ Builder
 export async function handleFaqGeneration(serviceOfferings: string, regionalPlumbingCodes: string) {
-  if (!serviceOfferings || !regionalPlumbingCodes) {
-    return { error: 'SSS oluşturmak için her iki alan da gereklidir.' };
-  }
-
-  try {
-    const result = await generateFAQ({ serviceOfferings, regionalPlumbingCodes });
-    return { data: result };
-  } catch (e) {
-    console.error(e);
-    return { error: 'SSS oluşturulamadı. Lütfen daha sonra tekrar deneyin.' };
-  }
+    // Static export does not support server actions.
+    console.warn('FAQ generation is disabled in static export mode.');
+    return { error: 'Bu özellik şu anda aktif değil.' };
 }
